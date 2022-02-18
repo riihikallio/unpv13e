@@ -19,7 +19,7 @@ main(int argc, char **argv)
 
 	Bind(listenfd, (SA *) &servaddr, sizeof(servaddr));
 
-	Listen(listenfd, LISTENQ);
+	// Listen(listenfd, LISTENQ);
 
 	for ( ; ; ) {
 		len = sizeof(cliaddr);
