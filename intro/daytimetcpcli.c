@@ -17,7 +17,7 @@ main(int argc, char **argv)
 	if (inet_pton(AF_INET, argv[1], &servaddr.sin_addr) <= 0)
 		err_quit("inet_pton error for %s", argv[1]);
 	
-	num = strtol(argv[2]);
+	num = atoi(argv[2]);
 	if (!num) num = 1;
 	for(int i = 0; i < num; i++) {
 		if ( (sockfd = socket(AF_INET, SOCK_STREAM, 0)) < 0)
