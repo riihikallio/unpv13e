@@ -34,7 +34,7 @@ main(int argc, char **argv)
 		if (n < 0)
 			err_sys("read error");
 
-		if (shutdown(sockfd, 2) < 0)
+		if (close(sockfd) < 0)
 			err_sys("socket close error");
 	}
 
